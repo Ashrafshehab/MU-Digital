@@ -6,6 +6,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/admin");
 eleventyConfig.addPassthroughCopy("src/admin");
   // ─── Plugins ────────────────────────────────────────────────────────────────
   eleventyConfig.addPlugin(pluginRss);
