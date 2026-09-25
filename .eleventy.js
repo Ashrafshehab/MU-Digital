@@ -84,8 +84,7 @@ module.exports = function (eleventyConfig) {
   // robots.txt is now a Nunjucks template (robots.njk)
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
-eleventyConfig.addPassthroughCopy("src/_worker.js");
-  
+eleventyConfig.addPassthroughCopy({ "src/_worker.js": "_worker.js" });  
   // ─── Watch Targets ──────────────────────────────────────────────────────────
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
