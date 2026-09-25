@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: Ashrafshehab/MU-Digital
+  branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "المقالات والأخبار"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "الكاتب", name: "author", widget: "string", default: "فريق التحرير" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime" }
+      - { label: "الوصف / الملخص", name: "description", widget: "text" }
+      - { label: "صورة المقال", name: "image", widget: "image", required: false }
+      - { label: "المحتوى", name: "body", widget: "markdown" }
